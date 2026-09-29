@@ -1,0 +1,17 @@
+name: no_01 Pages policy control
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Record policy control execution
+        run: printf '%s\n' 'NO_01_REPOSITORY_WORKFLOW_EXECUTED'
